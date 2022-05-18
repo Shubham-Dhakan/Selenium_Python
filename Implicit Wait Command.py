@@ -13,6 +13,9 @@ print(driver.title)                         # title is method
 print(driver.current_url)                   # < current_url, page_source > are methods
 
 searchbox = driver.find_element(By.XPATH,"//input[@id='gh-ac']")
+
 searchbox.send_keys("Apple Iphone 13 Pro")
 print(searchbox.get_attribute('value'))
 searchbox.submit()                          # "submit()" is element method
+
+driver.quit()
